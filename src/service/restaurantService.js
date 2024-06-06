@@ -72,7 +72,7 @@ return restaurants;
 
 },
 
-async getRestaurantByUserId(userId){
+async getRestaurantsByUserId(userId){
 
 try {
     const restaurant = await Restaurant.findOne({ owner: userId})
@@ -113,7 +113,7 @@ return restaurants;
 
 },
 
-async addToFavorite(restaurantId){
+async addToFavorites(restaurantId){
 
 try {
     const restaurant=this.findRestaurantById(restaurantId);
