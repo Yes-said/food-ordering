@@ -1,4 +1,4 @@
-const restaurantService = require("../service/RestaurantService");
+const restaurantService = require("../service/RestaurantService.js");
 
 module.exports={
 
@@ -8,7 +8,7 @@ try {
     
 const user = req.user;
 
-const restaurant=await restaurantService.createRestaurant(
+const restaurant = await RestaurantService.createRestaurant(
     req.body,
     user
 );
