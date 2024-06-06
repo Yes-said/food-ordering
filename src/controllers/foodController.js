@@ -1,5 +1,3 @@
-
-const { updateAvailabilityStatus } = require("../service/foodService");
 const foodService = require("../services/food.service.js");
 const restaurantService = require("../services/restaurant.service.js");
 const userService = require("../services/user.service.js");
