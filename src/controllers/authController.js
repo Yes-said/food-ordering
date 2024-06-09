@@ -1,6 +1,6 @@
 const { generateToken } = require("../config/jwtProvider");
 const bcrypt=require("bcrypt");
-const userService = require("../service/userService")
+const userService = require("../services/user.service")
 
 const register=async(req,res)=>{
 
