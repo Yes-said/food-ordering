@@ -1,5 +1,6 @@
 const { getUserIdFromToken} = require("../config/jwtProvider");
 const userService = require("../service/userService");
+
 const authenticate=async(req,res,next)=>{
 
 
@@ -26,3 +27,5 @@ req.user=user;
 next();
 
 }
+
+module.exports = authenticate;
