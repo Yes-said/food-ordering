@@ -2,18 +2,18 @@ const { getUserIdFromToken } = require("../config/jwtProvider");
 const User = require("../models/user.model");
 const bcrypt=require("bcrypt");
 module.exports={
-    async createUser(userData){
+    async createUser(userData) {
 
 try {
     let {fullName,emailValue,password,role} = userData;
-    const isUserExist=await User.findOne({email:emailValue});
+    const isUserExist= await User.findOne({email: emailValue});
 if(isUserExist) {
 throw new Error("User already exist with email",emailValue);
 }
 
 password=await bcrypt.hash(password,8);
 
-const user=await User.create({
+const user = await User.create({
     fullName, 
     email: emailValue, 
     password:password,
@@ -30,7 +30,7 @@ return user;
 
 async getUserByEmail(email){
     try {
-        const user=await User.findOne({ email: email });
+        const user = await User.findOne({ email: email });
 if(!user){
     throw new Error("User not found");
 }

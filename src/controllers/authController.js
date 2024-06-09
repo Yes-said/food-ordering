@@ -28,7 +28,7 @@ return res.status(401).send({message:"invalid password"})
 } 
 
 const jwt=generateToken(user._id);
-return res.status(200).send({jwt,message:"login success",isPasswordValid})
+return res.status(200).send({jwt,message:"login success",user})
 
 } catch (error) {
     return res.status(500).send({error:error.message})

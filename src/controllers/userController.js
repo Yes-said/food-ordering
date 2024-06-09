@@ -8,9 +8,9 @@ module.exports = {
 
 
         try {
-            // const user = req.user;
-            const jwt = req.headers.authorization?.split(' ')[1];
-            const user = await userService.findUserProfileByJwt(jwt);
+        const user = req.user;
+            // const jwt = req.headers.authorization?.split(' ')[1];
+            // const user = await userService.findUserProfileByJwt(jwt);
             user.password = null;
             res.status(200).json(user);
 
