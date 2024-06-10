@@ -1,4 +1,4 @@
-const { createCategory } = require("../service/category.service");
+const { createCategory } = require("../services/category.service");
 const categoryService = require("../services/category.service");
 const userService = require("../services/user.service");
 
@@ -38,6 +38,7 @@ module.exports = {
                 res.status(400).json({ error: error.message});
             } else {
                 res.status(500).json({ error: "Internal server error" });
+                
             }
             
         }

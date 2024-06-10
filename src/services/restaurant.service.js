@@ -16,7 +16,7 @@ try {
 
     const savedAddress=await address.save();
 
-const restaurant=new restauurant({
+const restaurant=new restaurant({
     address: savedAddress,
     contactInformation:req.contactInformation,
     cuisineType: req.cuisineType,

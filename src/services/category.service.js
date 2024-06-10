@@ -1,5 +1,6 @@
-const Category = require("../models/category.model");
+const Category = require("../models/category.models");
 const Restaurant = require("../models/restaurant.model");
+
 
 
 module.exports = {
@@ -15,9 +16,8 @@ async createCategory(name, userId) {
        }
 
        // Create and save new category
-
        const createdCategory = new Category({ name, restaurant: restaurant._id });
-       await createdCategory.seve();
+       await createdCategory.save();
        return createdCategory;
     } catch (error) {
         
