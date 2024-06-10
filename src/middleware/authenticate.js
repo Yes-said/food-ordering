@@ -11,11 +11,11 @@ try {
 const token=req.headers.authorization?.split(" ")[1]
 
 if(!token){
-    return res.status(401).json({message:"No token provided"})
+    return res.status(401).json({message:"please provide a token"})
 }
 
 const userId=getUserIdFromToken(token)
-const user=userService.findUserById(userId);
+const user= await userService.findUserById(userId);
 
 req.user=user;
 

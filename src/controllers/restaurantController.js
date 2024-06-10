@@ -1,4 +1,4 @@
-const restaurantService = require("../service/RestaurantService.js");
+const restaurantService = require("../services/RestaurantService.js");
 
 module.exports={
 

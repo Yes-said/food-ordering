@@ -1,9 +1,9 @@
+
 const Address = require("../models/address.model");
 const Order = require("../models/order.model");
 const OrderItem = require("../models/orderItem.model");
 const Restaurant = require("../models/restaurant.model");
-const cartService = require("./cart.service");
-const paymentService = require("./payment.service");
+const cartService = require("./cart.service")
 
 
 module.exports = {
@@ -32,7 +32,7 @@ if (!user.addresses.includes(savedAddress._id)) {
 
 const restaurant = await Restaurant.findById(order.restaurantId);
 if (!restaurant) {
-    throw new Error(`Restaurant not found with ID ${ordre.restaurantId}`);
+    throw new Error(`Restaurant not found with ID ${order.restaurantId}`);
 }
 
 const cart = await cartService.findCartByUserId(user._id);

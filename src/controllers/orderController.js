@@ -1,4 +1,4 @@
-const { createOrder, updateOrder } = require("../service/order.service");
+const { createOrder, updateOrder } = require("../services/order.service");
 const orderService = require("../services/order.service.js");
 const userService = require("../services/user.service.js");
 
@@ -16,6 +16,7 @@ const order = req.body;
 const user = req.user;
 
 const paymentResponse = await orderService.createOrder(order, user);
+
 res.status(200).json(paymentResponse);
 
         } catch (error) {

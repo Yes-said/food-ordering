@@ -1,5 +1,6 @@
+
 const Cart = require("../models/cart.model");
-const CartItem = require("../models/CartItem");
+const CartItem = require("../models/cartItem.model");
 const Food = require("../models/food.model");
 
 module.exports = {

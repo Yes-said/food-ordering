@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 //Define the OrderItem schema
-const CategorySchema = new mongoose.Schema({
+const OrderItemSchema = new mongoose.Schema({
     food: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Food',
